@@ -1,0 +1,114 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+        body {
+            background-color: black;
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            background-color: white;
+        }
+
+        .v-layout {
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+        }
+
+        .h-layout {
+            display: flex;
+            background-color: transparent;
+        }
+
+        .main-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: black;
+        }
+
+        .text-start {
+            width: max-content;
+            color: white;
+            border: none;
+            text-align: left;
+            font-size: 18px;
+            background-color: transparent;
+            font-family: "Google Sans";
+        }
+
+        .button-start {
+            width: 250px;
+            color: white;
+            background-color: green;
+            padding: 10px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: "Google Sans";
+        }
+
+        .checkbox-start {
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border: none;
+            border-radius: 30px;
+            background-color: white;
+        }
+
+        .checkbox-start:checked {
+            background-color: cyan;
+        }
+
+        .checkbox-start:focus {
+            outline: none;
+        }
+    </style>
+    <body>
+        <div class="h-layout">
+            <div class="v-layout" style="margin-left: 150px; flex: 1;">
+                <div class="main-layout">
+                    <button class="text-start" style="font-weight: bold; margin-top: 200px;">Arclight Minecraft Server</button>
+                    <button class="text-start" style="font-size: 14px;">minecraft java server with plugins and mods support.</button>
+                    <button class="button-start" style="margin-top: 20px;">Start Server</button>
+                </div>
+
+                <div class="h-layout" style="height: 400px; width: 500px; margin-top: 80px;">
+                    <div class="v-layout" style="flex: 1;">
+                        <div class="h-layout" style="align-items: center;">
+                            <input type="checkbox" class="checkbox-start">
+                            <button class="text-start">Online Mode</button>
+                        </div>
+                    </div>
+
+                    <div class="v-layout" style="flex: 1;">
+                        <div class="h-layout" style="align-items: center;">
+                            <input type="checkbox" class="checkbox-start">
+                            <button class="text-start">ViaVersion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="v-layout" style="width: 600px; height: 500px; margin-top: 150px; margin-right: 150px;">
+                <div class="h-layout" style="gap: 30px;">
+                    <button class="button-start" style="padding: 0; width: min-content; background-color: transparent;">Plugins</button>
+                    <button class="button-start" style="padding: 0; width: min-content; background-color: transparent;">Mods</button>
+                </div>
+
+                <div class="v-layout" style="border-radius: 10px; background-color: white; width: 100%; height: 100%; margin-top: 20px;">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
