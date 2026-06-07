@@ -1,5 +1,5 @@
 HTTP/1.1 200 OK
-Content-Type: text/html
+Content-Type: text/html 
 
 
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ Content-Type: text/html
                 <div class="main-layout">
                     <button class="text-start" style="font-weight: bold; margin-top: 200px;">Arclight Minecraft Server</button>
                     <button class="text-start" style="font-size: 14px;">minecraft java server with plugins and mods support.</button>
-                    <button class="button-start" style="margin-top: 20px;">Start Server</button>
+                    <button id="btn-start-server" onclick="send_action('/start-server', function(){ console.log('server perform') })" class="button-start" style="margin-top: 20px;">Start Server</button>
                 </div>
 
                 <div class="h-layout" style="height: 400px; width: 500px; margin-top: 80px;">
@@ -94,7 +94,7 @@ Content-Type: text/html
                     <div class="v-layout" style="flex: 1;">
                         <div class="h-layout" style="align-items: center;">
                             <input type="checkbox" class="checkbox-start">
-                            <button class="text-start">ViaVersion</button>
+                            <button class="text-start">GeyserMC</button>
                         </div>
                     </div>
                 </div>
@@ -110,5 +110,11 @@ Content-Type: text/html
                 </div>
             </div>
         </div>
+        <script>
+            function send_action(action, perform) {
+                perform();
+                fetch(action);
+            }
+        </script>
     </body>
 </html>

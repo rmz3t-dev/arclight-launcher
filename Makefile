@@ -1,5 +1,5 @@
 all:
-	clang -o server server.cpp -static
+	clang -o server server.cpp cJSON/cJSON.c -static -w
 
 start-server:
 	./server
